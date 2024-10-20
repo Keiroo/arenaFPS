@@ -5,7 +5,7 @@ namespace ArenaFPS.Scripts
     [CreateAssetMenu]
     public class OptionsScriptableObject : ScriptableObject
     {
-        [Range(0.01f, 10f)]
-        public float MouseSensivity = 1f;
+        [Range(0.01f, 1f)]
+        public float LookSensitivity = 0.5f;
     }
 }

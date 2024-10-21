@@ -8,6 +8,8 @@ namespace ArenaFPS.Scripts
         private Transform parent;
         private float xRotation = 0f;
 
+        private bool firstLook = true;
+
         private void Start()
         {
             parent = transform.parent;
@@ -16,6 +18,13 @@ namespace ArenaFPS.Scripts
 
         private void OnLook(InputAction.CallbackContext context)
         {
+            if (firstLook)
+            {
+                firstLook = false;
+                DebugLogger.Log("Discard first look event");
+                return;
+            }
+
             var lookRawValue = context.ReadValue<Vector2>();
             if (lookRawValue == null)
             {

@@ -1,3 +1,4 @@
+using DG.Tweening;
 using UnityEngine;
 
 namespace ArenaFPS.Scripts
@@ -11,6 +12,7 @@ namespace ArenaFPS.Scripts
         {
             InputActions = new InputSystemActions();
             InputActions.Player.Enable();
+            DOTween.Init();
         }
 
         private void Start()

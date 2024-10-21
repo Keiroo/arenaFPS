@@ -200,6 +200,8 @@ MonoBehaviour:
   MoveSmoothTime: 0.2
   GravityStrength: 2
   JumpStrength: 3
+  DashSmoothTime: 1
+  DashStrength: 20
   GroundCheckTransform: {fileID: 444576515}
   GroundMask:
     serializedVersion: 2
@@ -822,7 +824,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 50, y: 0.01, z: 50}
+  m_LocalScale: {x: 100, y: 0.01, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 260531026}

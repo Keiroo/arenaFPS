@@ -18,6 +18,8 @@ namespace ArenaFPS.Scripts
 
         private void OnLook(InputAction.CallbackContext context)
         {
+            // Discard first look event
+            // In editor, first look always rotates to ground
             if (firstLook)
             {
                 firstLook = false;

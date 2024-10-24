@@ -11,8 +11,6 @@ GameObject:
   - component: {fileID: 8937851967055906324}
   - component: {fileID: 4021299596429522453}
   - component: {fileID: 7866325329156498146}
-  - component: {fileID: 6286995538363161357}
-  - component: {fileID: 5231431770097649119}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -85,39 +83,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &6286995538363161357
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3389215302410017048}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5231431770097649119
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3389215302410017048}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 53f52b38e74d333419ace9487c339022, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &5555078129062894151
 GameObject:
   m_ObjectHideFlags: 0
@@ -129,6 +94,7 @@ GameObject:
   - component: {fileID: 4624492113541709345}
   - component: {fileID: 3740445543792490419}
   - component: {fileID: 6957172697271957594}
+  - component: {fileID: 2098858129295943806}
   m_Layer: 0
   m_Name: BulletPrefab
   m_TagString: Untagged
@@ -193,3 +159,24 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &2098858129295943806
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5555078129062894151}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.1, y: 0.1, z: 0.1}
+  m_Center: {x: 0, y: 0, z: 0}

@@ -17,24 +17,9 @@ namespace ArenaFPS.Scripts
         {
             if (!TryGetComponent(out rBody))
                 DebugLogger.Log("Rigidbody not found");
-
-            var bulletCollision = GetComponentInChildren<BulletCollision>(true);
-            if (bulletCollision == null)
-                DebugLogger.Log("BulletCollision not found");
-            else
-                bulletCollision.OnCollision += OnCollision;        
         }
 
-        public void Shoot()
-        {
-            // StartCoroutine(MockShootRoutine());
-            var direction = Weapon.transform.forward;
-            var speed = Weapon.BulletSpeed;
-            rBody.velocity = direction * speed;
-            // StartCoroutine(MockShootRoutine());
-        }
-
-        private void OnCollision(Collision other)
+        private void OnTriggerEnter(Collider other)
         {
             if (CollisionTags != null)
             {
@@ -43,6 +28,13 @@ namespace ArenaFPS.Scripts
                     ReturnToPool();
                 }
             }
+        }
+
+        public void Shoot()
+        {
+            var direction = Weapon.transform.forward;
+            var speed = Weapon.BulletSpeed;
+            rBody.velocity = direction * speed;
         }
 
         private void ReturnToPool()
@@ -55,11 +47,5 @@ namespace ArenaFPS.Scripts
         {
             yield return null;
         }
-
-        // private IEnumerator MockShootRoutine()
-        // {
-        //     yield return new WaitForSeconds(Random.Range(2f, 4f));
-        //     ReturnToPool();
-        // }
     }
 }

@@ -6,7 +6,10 @@ namespace ArenaFPS.Scripts
     public class GameManager : MonoBehaviourSingleton<GameManager>
     {
         public OptionsScriptableObject Options;
-        public InputSystemActions InputActions;
+        public GameObject Player;
+
+        public InputSystemActions InputActions { get; private set; }
+        public int CurrentLevel = 1;
 
         private void Awake()
         {
@@ -18,6 +21,7 @@ namespace ArenaFPS.Scripts
         private void Start()
         {
             Cursor.lockState = CursorLockMode.Locked;
+            CurrentLevel = 1;
         }
     }
 }
